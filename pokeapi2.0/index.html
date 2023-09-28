@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex Web</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <header class="pokedex-header d-flex justify-content-between align-items-center py-2 px-4">
+            <div class="pokeball left-pokeball"></div>
+            <span class="header-title">Pokédex Nacional</span>
+            <div class="pokeball right-pokeball"></div>
+        
+            <div class="controls-container">
+                
+                
+                <div class="right-controls">
+                    <input type="search" id="numberSearch" placeholder="Número">
+                </div>
+            </div>
+        </header>
+        
+
+        <div class="row no-gutters">
+            <div class="col-7">
+                <div class="pokedex-display">
+                    <img src="" alt="Pokemon Image" id="pokemonImage">
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="pokedex-list">
+                    <ul id="pokemonList">
+                        <!-- Aquí se insertarán los Pokémon desde la PokeAPI -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer class="pokedex-footer py-2">
+            <!-- Los botones o controles irán aquí -->
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

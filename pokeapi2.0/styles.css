@@ -1,0 +1,329 @@
+.pokedex-display {
+    border: 5px solid #FFCB05;
+    padding: 20px;
+    background-color: #3D7DCA;
+    height: 500px;
+}
+
+.pokedex-list {
+    border: 5px solid #FFCB05;
+    
+    height: 500px;
+    overflow-y: scroll;
+}
+
+#pokemonImage {
+    width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+#pokemonList {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+#pokemonList li {
+    padding: 10px;
+    border-bottom: 1px solid #FFCB05;
+}
+
+#pokemonList li:last-child {
+    border-bottom: none;
+}
+body, html {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.pokedex-header {
+    background-color: #FFCB05;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+
+.pokedex-display {
+    border-right: 5px solid #FFCB05;
+    padding: 20px;
+    background-color: #3D7DCA;
+    height: calc(100vh - 60px); /* Ajusta según la altura del header y footer */
+    position: relative;
+    overflow: hidden;
+    
+}
+
+#pokemonImage {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 80%;
+}
+
+.pokedex-list {
+    height: calc(100vh - 60px);
+    border-left: 5px solid #FFCB05;
+    overflow-y: scroll;
+    
+    
+}
+
+#pokemonList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    
+    
+
+}
+
+#pokemonList li {
+    padding: 10px;
+    border-bottom: 1px solid #FFCB05;
+    color: #4c463b;
+    font-weight: bold;
+}
+
+#pokemonList li:last-child {
+    border-bottom: none;
+}
+
+.pokedex-footer {
+    background-color: #FFCB05;
+    font-size: 1rem;
+}
+
+
+
+
+.pokedex-header {
+    background-color: #FFCB05;
+    font-weight: bold;
+}
+
+.control-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #3D7DCA;
+}
+
+.header-title {
+    margin: 0 15px;
+}
+
+.search-controls {
+    font-size: 1.2rem;
+    color: #3D7DCA;
+}
+
+#pokemonSearch {
+    width: 60px;
+    border: none;
+    text-align: center;
+    background-color: #F7E09D;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+
+
+/* ... (otros estilos) ... */
+
+.pokemon-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: rgba(red, green, blue, 0); /* Color de fondo por defecto */
+    cursor: pointer;
+    border-bottom: 2px solid #ffffff;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    margin: 10px;
+
+}
+
+.pokemon-item.selected {
+    background-color: #FF6B6B; /* Color de fondo cuando está seleccionado */
+    color: white;
+    border-bottom: 5px solid #ffffff;
+}
+
+.pokemon-icon {
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+}
+
+.pokemon-number {
+    flex-grow: 1;
+}
+
+.control-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: white; /* Color del botón cuando el Pokémon está seleccionado */
+}
+
+
+.pokedex-display {
+    background-color: rgb(255, 255, 255);
+    border: 10px solid #87cef3;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px solid #f4e362 ;
+    padding: 20px;
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 20px,
+        rgb(199,227,240) 20px,
+        rgb(215,235,242) 40px
+    );
+}
+
+#pokemonImage {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+.pokedex-header {
+    background-color: #FFCB05;
+    border-radius: 20px 20px 0 0;
+}
+
+.control-button {
+    background-color: #313233;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.search-controls .search-box {
+    width: 60px;
+    border: none;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.right-controls input[type="search"] {
+    border: none;
+    background-color: #FFCB05;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+/* Estilo general para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Estilo del track (fondo de la barra) */
+::-webkit-scrollbar-track {
+    background: #1E90FF;  /* color azul */
+}
+
+/* Estilo del handle (barra que se desplaza) */
+::-webkit-scrollbar-thumb {
+    background: #FF4500;  /* color rojo */
+    border-radius: 10px; /* bordes redondeados */
+}
+
+/* Estilo del handle al pasar el cursor sobre él */
+::-webkit-scrollbar-thumb:hover {
+    background: #FF6347;  /* un tono de rojo un poco más claro */
+}
+
+.pokemon-item.selected {
+    background-color: #FF4500;  /* Rojo */
+    color: #FFF;  /* Texto blanco para mejor contraste */
+    transition: background-color 0.3s ease;
+}
+
+.pokeball {
+    width: 40px;
+    height: 40px;
+    background: #FFF;
+    border: 3px solid #000;
+    border-radius: 50%;
+    position: relative;
+}
+
+.pokeball::before {
+    content: "";
+    width: 40px;
+    height: 3px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pokeball::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: #FFF;
+    border: 3px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.left-pokeball {
+    background: radial-gradient(circle, #FFF, #FFC000);
+}
+
+.right-pokeball {
+    background: radial-gradient(circle, #FFF, #FFC000);
+}
+.pokedex-header {
+    background-color: #FCD748; /* Cambia el color según tus preferencias */
+    border-radius: 20px 20px 0 0; /* Hace las esquinas redondeadas en la parte superior */
+}
+
+.pokeball {
+    width: 40px;
+    height: 40px;
+    background-color: #FCD748; /* El mismo color que el encabezado */
+    border: 2px solid #000;
+    border-radius: 50%; /* Hace que sea un círculo */
+}
+
+.left-pokeball {
+    margin-right: 10px; /* Espaciado entre el pokeball y el título */
+}
+
+.right-pokeball {
+    margin-left: 10px; /* Espaciado entre el pokeball y el título */
+}
+
+.controls-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos uniformemente */
+    align-items: center;
+    width: 100%; /* Asegura que los controles ocupen todo el ancho disponible */
+}
+
+.search-box {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: #fff;
+    margin-right: 10px;
+}
