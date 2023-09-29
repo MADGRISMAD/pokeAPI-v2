@@ -1,12 +1,13 @@
 .pokedex-display {
-    border: 5px solid #FFCB05;
+    
     padding: 20px;
     background-color: #3D7DCA;
     height: 500px;
 }
 
 .pokedex-list {
-    border: 5px solid #FFCB05;
+    
+    margin: 1px 0;
     
     height: 500px;
     overflow-y: scroll;
@@ -37,6 +38,7 @@
 body, html {
     height: 100%;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .pokedex-header {
@@ -47,7 +49,7 @@ body, html {
 }
 
 .pokedex-display {
-    border-right: 5px solid #FFCB05;
+    
     padding: 20px;
     background-color: #3D7DCA;
     height: calc(100vh - 60px); /* Ajusta según la altura del header y footer */
@@ -66,7 +68,7 @@ body, html {
 
 .pokedex-list {
     height: calc(100vh - 60px);
-    border-left: 5px solid #FFCB05;
+    
     overflow-y: scroll;
     
     
@@ -76,7 +78,7 @@ body, html {
     list-style-type: none;
     padding: 0;
     margin-top: 20px;
-    
+    color: #300707;
     
 
 }
@@ -137,17 +139,18 @@ body, html {
     display: flex;
     align-items: center;
     padding: 5px 10px;
-    background-color: rgba(red, green, blue, 0); /* Color de fondo por defecto */
+    background-color:#fcebb8;
     cursor: pointer;
     border-bottom: 2px solid #ffffff;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     margin: 10px;
+    c
 
 }
 
 .pokemon-item.selected {
-    background-color: #FF6B6B; /* Color de fondo cuando está seleccionado */
+    background-color: #FF4500;
     color: white;
     border-bottom: 5px solid #ffffff;
 }
@@ -327,3 +330,132 @@ body, html {
     background-color: #fff;
     margin-right: 10px;
 }
+
+
+#FONDO {
+    
+    background-size: cover; /* Ajusta la imagen al tamaño del div */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center center; /* Centra la imagen en el div */
+}
+
+.col-7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.pokedex-display {
+    width: 70%; /* Ajusta este valor según cuán pequeño quieras que sea el display */
+    height: 80vh; 
+    
+    /* Puedes agregar cualquier otra propiedad para ajustar la apariencia */
+}
+
+#FONDO {
+     /* Reemplaza con tu URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+}
+
+
+
+
+#pokemonList li::before {
+    content: ''; /* necesario para que el pseudo-elemento se muestre */
+    display: inline-block; /* para que podamos darle dimensiones */
+    width: 24px; /* el ancho de la Pokébola (ajusta según el tamaño de tu imagen) */
+    height: 24px; /* el alto de la Pokébola (ajusta según el tamaño de tu imagen) */
+    background-image: url('/bola.png'); /* reemplaza con la ruta correcta a tu imagen */
+    background-size: cover; /* para que la imagen cubra todo el espacio del pseudo-elemento */
+    margin-right: 10px; /* espacio entre la Pokébola y el número del Pokémon */
+    vertical-align: middle; /* para alinearla verticalmente con el texto */
+}
+
+#pokemonList li {
+    width: 90%; /* ajusta este valor según tu preferencia */
+    margin-right: auto; /* centrar el elemento */
+    padding-right: 5%; /* añadir un padding para dar más espacio en el lado derecho */
+}
+
+.side-bar {
+    width: 5%; 
+    height: 90%;
+    background-color: #FCD748;
+    position: absolute;
+    z-index: 10; /* Asegura que esté por encima del contenido */
+    top: 80px; /* Ajusta según la altura de tu encabezado */
+    bottom: 60px; /* Ajusta según la altura de tu pie de página */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-pokeball {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    
+    background-image: url('/bola.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* ... (tu CSS anterior se mantiene igual) ... */
+
+#FONDO {
+    position: relative; 
+    /* ... tus otros estilos para #FONDO ... */
+}
+
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+
+.circles-layer, .squares-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%;
+    height: 500%;
+    animation: moveBackground 10s linear infinite;
+}
+
+.circles-layer {
+    background: radial-gradient(circle, rgba(0,0,255,0.5) 20%, transparent 20.5%);
+    background-size: 160px 160px; 
+    background-position: 0 0, 30px 30px;
+    animation-direction: reverse;
+}
+
+
+.squares-layer {
+    background: repeating-linear-gradient(45deg, rgba(0,0,255,0.5), rgba(0,0,255,0.5) 25%, transparent 25%, transparent 50%);
+    background-size: 160px 160px;
+    
+}
+
+@keyframes moveBackground {
+    0% {
+        transform: translate(0, 0);
+
+
+    }
+    100% {
+        transform: translate(-20%, -20%);
+        
+    }
+    
+   
+
+
+}
+
+
